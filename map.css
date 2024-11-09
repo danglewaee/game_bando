@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: rgb(39, 44, 67);
+  }
+  
+  #name {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    opacity: 0;
+    border-radius: 5px;
+    border: 3px solid rgb(245, 128, 128);
+    padding: 0px 5px;
+    font-size: 23px;
+    z-index: 9999;  
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  
+  svg {
+    margin-top: 80px;
+    margin-right: 80px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  
+  svg path {
+    cursor: pointer;
+  }
+  
+  #map {
+    width: 100%;
+    height: 100%;
+    cursor: grab; 
+  }
+  
+  #inputSection {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  #countryInput {
+    padding: 5px;
+    font-size: 16px;
+    width: 200px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  #resultMessage {
+    display: none; /* Ẩn mặc định */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Ẩn thông báo khi không có kết quả */
+    animation: fadeIn 1s forwards;
+  }
+  
+  #resultText {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffd700; /* Vàng nổi bật */
+    letter-spacing: 2px;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #resultMessage.show {
+    display: block; /* Hiển thị thông báo */
+  }
+  
+  .play-again-button {
+    margin-top: 13px;
+    padding: 10px 20px;
+    margin-left: 180px;
+    font-size: 18px;
+    color: white;
+    background-color: #28a745; /* Màu xanh lá cây */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .play-again-button:hover {
+    background-color: #218838; /* Màu xanh đậm hơn khi hover */
+  }
+  
+  .play-again-button:active {
+    background-color: #1e7e34; /* Màu xanh tối khi nhấn */
+  }
