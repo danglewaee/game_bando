@@ -20,8 +20,7 @@
     margin: 10px;
     padding: 10px;
   }
-  
-  
+
   svg {
     margin-top: 80px;
     margin-right: 80px;
@@ -38,7 +37,7 @@
     height: 100%;
     cursor: grab; 
   }
-  
+
   #inputSection {
     position: absolute;
     bottom: 20px;
@@ -61,7 +60,17 @@
     margin-left: 10px;
     cursor: pointer;
   }
-  
+  .arrow {
+    width: 0;
+    height: 5px;
+    color:aquamarine;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid; /* Arrow color */
+    position: absolute;
+    display: none; /* Hide initially */
+  }
+
   #resultMessage {
     display: none; /* Ẩn mặc định */
     position: absolute;
@@ -108,7 +117,7 @@
     margin-left: 180px;
     font-size: 18px;
     color: white;
-    background-color: #28a745; /* Màu xanh lá cây */
+    background-color: #28a745; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -116,9 +125,19 @@
   }
   
   .play-again-button:hover {
-    background-color: #218838; /* Màu xanh đậm hơn khi hover */
+    background-color: #218838; 
   }
   
   .play-again-button:active {
-    background-color: #1e7e34; /* Màu xanh tối khi nhấn */
+    background-color: #1e7e34; 
   }
+
+
+
+
+
+
+
+  
+
+ 
