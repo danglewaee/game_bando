@@ -2,7 +2,7 @@ let countriesGuessed = 0;
 const totalCountries = document.querySelectorAll(".allPaths").length;
 const countryNames = {}; 
 let selectedCountry = null;
-
+let firstattempt = true;
 document.querySelectorAll(".allPaths").forEach(e => {
   e.setAttribute('class', `allPaths ${e.id}`);
   countryNames[e.id] = e.id; 
@@ -26,13 +26,14 @@ function selectRandomCountry() {
   const randomIndex = Math.floor(Math.random() * allCountries.length);
   selectedCountry = allCountries[randomIndex];
   selectedCountry.style.fill = "pink";
-
+  document.getElementById("name").style.display = "none";
   const boundingBox = selectedCountry.getBoundingClientRect();
 
   const countryId = selectedCountry.id;
   const countryParts = document.querySelectorAll(`#${countryId}`);
   countryParts.forEach(part => part.style.fill = "pink");
-
+  firstattempt = true;
+  document.getElementById("name").style.display = "none";
   document.getElementById("namep").innerText = countryId;
   document.getElementById("name").style.opacity = 1;
   moveArrowToLeftBorder();
@@ -66,6 +67,10 @@ function checkAnswer() {
       }, 1000); 
     }
   } else {
+    if (firstAttempt) {
+      document.getElementById("name").style.display = "block"; // Show name on first incorrect guess
+      firstAttempt = false; // Mark that the user has already guessed incorrectly
+    }
     alert("Wrong! Try again.");
   }
 }
